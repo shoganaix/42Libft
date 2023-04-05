@@ -16,7 +16,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 	
-	ptr = (unsigned int *) malloc (count * size);
+	ptr = (void*)malloc (count * size);
 	if (ptr != '\0')
 	{
 		ft_bzero(ptr, count * size);
@@ -25,7 +25,7 @@ void	*ft_calloc(size_t count, size_t size)
 	else
 		return (NULL);
 }
-/*
+/*if (ptr == 0 || size == SIZE_MAX || size == SIZE_MIN)
 int    main(void)
 {
     int *s1 = ft_calloc(5, sizeof(int));
