@@ -18,8 +18,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	unsigned long long	counter2;
 
 	counter1 = 0;
-	if (needle[0] == '\0' )
-		return ((char *) haystack);
+	if (!*needle)
+		return ((char *)haystack);
 	while (haystack[counter1] && counter1 < len)
 	{
 		counter2 = 0;
